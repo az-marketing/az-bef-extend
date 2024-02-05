@@ -1,0 +1,8 @@
+{
+    "name": "az-marketing/az-bef-extend",
+    "description": "Adds extra options to BEF",
+    "type": "drupal-module",
+    "require": {
+        "php": ">=7.2"
+    }
+}  
