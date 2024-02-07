@@ -5,24 +5,25 @@
 .bef-exposed-form.top-reset .form-row .form-actions {
   order: -1;
   width: 100%;
+  margin-bottom: 15px;
 }
 .bef-exposed-form.top-reset .form-row .form-actions .button {
   width: 100%;
 }
-.bef-exposed-form.bef-vertical-style summary {
+.bef-exposed-form.bef-vertical-style legend {
   font-size: 20px;
   font-weight: 700;
   color: #1E5288;
   list-style: none;
 }
-.bef-exposed-form.bef-vertical-style .form-item {
+.bef-exposed-form.bef-vertical-style .js-form-item {
   border-bottom: 1px solid #ccc;
   padding: 12px 0;
 }
-.bef-exposed-form.bef-vertical-style .form-item summary {
+.bef-exposed-form.bef-vertical-style .js-form-item summary {
   position: relative;
 }
-.bef-exposed-form.bef-vertical-style .form-item summary:after {
+.bef-exposed-form.bef-vertical-style .js-form-item summary:after {
   position: absolute;
   content: "";
   width: 9px;
@@ -35,7 +36,7 @@
   margin: auto;
   transform: rotate(135deg);
 }
-.bef-exposed-form.bef-vertical-style .form-item summary[aria-pressed=true]:after {
+.bef-exposed-form.bef-vertical-style .js-form-item summary[aria-pressed=true]:after {
   transform: rotate(-45deg);
 }
 .bef-exposed-form.bef-vertical-style ul {
