@@ -23,11 +23,17 @@
       color: #1E5288;
       list-style: none;
     }
-    .js-form-item{
+    .js-form-item, .form-item{
       border-bottom: 1px solid #ccc;
       padding: 12px 0;
-      summary{
+      summary, input{
         position: relative;
+        list-style-type: none;
+        padding: 0;
+        &:marker{
+          color:#fff;
+          z-index:-5;
+        }
         &:after{
           position: absolute;
           content: '';
