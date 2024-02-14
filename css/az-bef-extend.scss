@@ -26,14 +26,20 @@
     .js-form-item, .form-item{
       border-bottom: 1px solid #ccc;
       padding: 12px 0;
+      .form-check-label{
+          margin-left: 6px;
+      }
       summary, input{
         position: relative;
         list-style-type: none;
         padding: 0;
+        font-weight: 700;
         &:marker{
           color:#fff;
           z-index:-5;
         }
+      }
+      summary{
         &:after{
           position: absolute;
           content: '';
@@ -58,17 +64,50 @@
     ul{
       list-style: none;
       padding-left: 0;
+      
+      li{
+          &:not(.has-nested-ul){
+              margin-left: 20px;
+          }
+      }
     }
     .has-nested-ul{
+        &.open{
+            > div{
+                label{
+                    &:after{
+                        content: "–";
+                    }
+                }
+            }
+            ul{
+                max-height: initial;
+            }
+        }
       >  div{
         padding-left: 0;
-        margin-left: 20px;
+        > input{
+            display: none;
+        }
         label{
           font-weight: 600;
+            &:after{
+              position: absolute;
+              content: '+';
+              width: 9px;
+              height: 9px;
+              top: 0;
+              right: 0;
+              bottom: 14px;
+              margin: auto;
+              color: #0C234B
+            }
         }
       }
       ul{
         padding-left: 21px;
+        overflow: hidden;
+        max-height: 0;
       }
     }
     .form-actions{

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .bef-exposed-form.top-reset .form-row {
   display: flex;
   flex-direction: column;
@@ -20,16 +21,20 @@
   border-bottom: 1px solid #ccc;
   padding: 12px 0;
 }
+.bef-exposed-form.bef-vertical-style .js-form-item .form-check-label, .bef-exposed-form.bef-vertical-style .form-item .form-check-label {
+  margin-left: 6px;
+}
 .bef-exposed-form.bef-vertical-style .js-form-item summary, .bef-exposed-form.bef-vertical-style .js-form-item input, .bef-exposed-form.bef-vertical-style .form-item summary, .bef-exposed-form.bef-vertical-style .form-item input {
   position: relative;
   list-style-type: none;
   padding: 0;
+  font-weight: 700;
 }
 .bef-exposed-form.bef-vertical-style .js-form-item summary:marker, .bef-exposed-form.bef-vertical-style .js-form-item input:marker, .bef-exposed-form.bef-vertical-style .form-item summary:marker, .bef-exposed-form.bef-vertical-style .form-item input:marker {
   color: #fff;
   z-index: -5;
 }
-.bef-exposed-form.bef-vertical-style .js-form-item summary:after, .bef-exposed-form.bef-vertical-style .js-form-item input:after, .bef-exposed-form.bef-vertical-style .form-item summary:after, .bef-exposed-form.bef-vertical-style .form-item input:after {
+.bef-exposed-form.bef-vertical-style .js-form-item summary:after, .bef-exposed-form.bef-vertical-style .form-item summary:after {
   position: absolute;
   content: "";
   width: 9px;
@@ -42,22 +47,46 @@
   margin: auto;
   transform: rotate(135deg);
 }
-.bef-exposed-form.bef-vertical-style .js-form-item summary[aria-pressed=true]:after, .bef-exposed-form.bef-vertical-style .js-form-item input[aria-pressed=true]:after, .bef-exposed-form.bef-vertical-style .form-item summary[aria-pressed=true]:after, .bef-exposed-form.bef-vertical-style .form-item input[aria-pressed=true]:after {
+.bef-exposed-form.bef-vertical-style .js-form-item summary[aria-pressed=true]:after, .bef-exposed-form.bef-vertical-style .form-item summary[aria-pressed=true]:after {
   transform: rotate(-45deg);
 }
 .bef-exposed-form.bef-vertical-style ul {
   list-style: none;
   padding-left: 0;
 }
+.bef-exposed-form.bef-vertical-style ul li:not(.has-nested-ul) {
+  margin-left: 20px;
+}
+.bef-exposed-form.bef-vertical-style .has-nested-ul.open > div label:after {
+  content: "–";
+}
+.bef-exposed-form.bef-vertical-style .has-nested-ul.open ul {
+  max-height: initial;
+}
 .bef-exposed-form.bef-vertical-style .has-nested-ul > div {
   padding-left: 0;
-  margin-left: 20px;
+}
+.bef-exposed-form.bef-vertical-style .has-nested-ul > div > input {
+  display: none;
 }
 .bef-exposed-form.bef-vertical-style .has-nested-ul > div label {
   font-weight: 600;
 }
+.bef-exposed-form.bef-vertical-style .has-nested-ul > div label:after {
+  position: absolute;
+  content: "+";
+  width: 9px;
+  height: 9px;
+  top: 0;
+  right: 0;
+  bottom: 14px;
+  margin: auto;
+  color: #0C234B;
+}
 .bef-exposed-form.bef-vertical-style .has-nested-ul ul {
   padding-left: 21px;
+  overflow: hidden;
+  max-height: 0;
 }
 .bef-exposed-form.bef-vertical-style .form-actions {
   padding-bottom: 24px;
