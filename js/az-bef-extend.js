@@ -6,10 +6,10 @@
         if (li.querySelector("ul")) {
           li.classList.add("has-nested-ul");
         }
-        const nest = context.querySelectorAll(".has-nested-ul label");
+        const nest = context.querySelectorAll(".has-nested-ul div");
         nest.forEach((lab) => {
           lab.addEventListener("click", function (e) {
-            let tog = e.target.parentElement.parentElement;
+            let tog = e.target.parentElement;
             if (tog.classList.contains("open")) {
               tog.classList.remove("open");
             } else {

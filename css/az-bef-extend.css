@@ -71,6 +71,7 @@
 }
 .bef-exposed-form.bef-vertical-style .has-nested-ul > div label {
   font-weight: 600;
+  pointer-events: none;
 }
 .bef-exposed-form.bef-vertical-style .has-nested-ul > div label:after {
   position: absolute;
@@ -106,4 +107,4 @@
 .bef-exposed-form.bef-vertical-style .form-radios ul {
   list-style: none;
   padding-left: 0;
-}/*# sourceMappingURL=az-bef-extend.css.map */
+}
