@@ -109,7 +109,14 @@
         padding-left: 21px;
         overflow: hidden;
         max-height: 0;
+
+        li div{
+          padding-left: 18px;
+        }
       }
+    }
+    .form-checkboxes.bef-checkboxes{
+      padding-left: 21px;
     }
     .form-actions{
       padding-bottom: 24px;
